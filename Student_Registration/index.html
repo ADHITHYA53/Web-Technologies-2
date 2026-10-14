@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Student Registration Portal</h1>
+      <p class="subtitle">College Admission &amp; Enrollment — Fill out all fields to register.</p>
+    </header>
+    <div id="statusMsg" class="alert-box" role="alert" hidden></div>
+    <form id="regForm" novalidate>
+      <div class="grid">
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" required placeholder="e.g. Alex Morgan">
+          <span class="err" id="nameErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="roll">Roll Number *</label>
+          <input type="text" id="roll" required placeholder="e.g. 24CS008">
+          <span class="err" id="rollErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" required placeholder="student@college.edu">
+          <span class="err" id="emailErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="course">Course / Department *</label>
+          <select id="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="CSE">Computer Science and Engineering (CSE)</option>
+            <option value="IT">Information Technology (IT)</option>
+            <option value="ECE">Electronics &amp; Communication (ECE)</option>
+            <option value="EEE">Electrical &amp; Electronics (EEE)</option>
+            <option value="Mechanical Engineering">Mechanical Engineering</option>
+            <option value="Civil Engineering">Civil Engineering</option>
+          </select>
+          <span class="err" id="courseErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="pass">Password *</label>
+          <input type="password" id="pass" required placeholder="Min 8 chars, Aa1@">
+          <div class="meter">
+            <span id="strengthText">Strength: None</span>
+            <div id="meterBar" class="bar"></div>
+          </div>
+          <span class="err" id="passErr" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="cpass">Confirm Password *</label>
+          <input type="password" id="cpass" required placeholder="Re-enter password">
+          <span class="err" id="cpassErr" role="alert"></span>
+        </div>
+      </div>
+      <div class="field full">
+        <label for="doc">Profile Image / Document (JPG, PNG, PDF, Max 5MB) *</label>
+        <input type="file" id="doc" accept=".jpg,.jpeg,.png,.pdf" required>
+        <span class="err" id="docErr" role="alert"></span>
+      </div>
+      <div class="actions">
+        <button type="submit" id="submitBtn" class="btn btn-primary">Submit Registration</button>
+        <button type="button" id="resetBtn" class="btn btn-secondary">Reset Form</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

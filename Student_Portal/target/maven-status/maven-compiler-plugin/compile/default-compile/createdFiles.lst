@@ -1,0 +1,8 @@
+com\studentportal\DBConnection.class
+com\studentportal\LogoutServlet.class
+com\studentportal\Student.class
+com\studentportal\StudentServlet.class
+com\studentportal\LoginServlet.class
+com\studentportal\FileServlet.class
+com\studentportal\AuthFilter.class
+com\studentportal\StudentFile.class

@@ -1,0 +1,70 @@
+/* Student Registration Portal - Neon Orange Theme */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #fdf8f4; color: #1e293b; padding: 2rem 1rem;
+}
+.container {
+  max-width: 760px; margin: 0 auto; background: #fff;
+  border-radius: 12px; box-shadow: 0 12px 28px rgba(255, 95, 31, 0.1), 0 2px 8px rgba(0, 0, 0, 0.04);
+  padding: 2rem; border-top: 5px solid #ff5f1f;
+}
+header { text-align: center; margin-bottom: 1.5rem; }
+header h1 { color: #18181b; font-size: 1.75rem; margin-bottom: 0.35rem; }
+.subtitle { color: #64748b; font-size: 0.95rem; }
+
+/* Grid Layout */
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 1.25rem; }
+.field { display: flex; flex-direction: column; margin-bottom: 0.5rem; }
+.field.full { margin-top: 0.5rem; }
+label { font-weight: 600; font-size: 0.875rem; margin-bottom: 0.35rem; color: #1e293b; }
+
+/* Form Controls with Neon Orange Focus */
+input, select {
+  height: 42px; padding: 0.5rem 0.75rem; border: 1.5px solid #cbd5e1;
+  border-radius: 6px; font-size: 0.925rem; font-family: inherit; width: 100%;
+  background: #fff; transition: border-color 0.2s, box-shadow 0.2s;
+}
+input[type="file"] { height: auto; padding: 0.4rem 0.5rem; }
+input:focus, select:focus {
+  outline: none; border-color: #ff5f1f; box-shadow: 0 0 0 3px rgba(255, 95, 31, 0.25);
+}
+input.invalid, select.invalid { border-color: #dc2626; background: #fffdfd; }
+input.invalid:focus, select.invalid:focus { box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2); }
+.err { color: #dc2626; font-size: 0.8rem; min-height: 1.15rem; margin-top: 0.25rem; }
+
+/* Password Strength Meter */
+.meter { margin-top: 0.35rem; font-size: 0.8rem; font-weight: 600; color: #64748b; }
+.bar { height: 6px; background: #e2e8f0; border-radius: 3px; margin-top: 0.25rem; overflow: hidden; }
+.bar::before { content: ''; display: block; height: 100%; width: var(--w, 0%); background: var(--c, #94a3b8); transition: 0.3s; }
+.weak { --w: 33%; --c: #dc2626; color: #dc2626; }
+.medium { --w: 66%; --c: #ff5f1f; color: #ff5f1f; }
+.strong { --w: 100%; --c: #16a34a; color: #16a34a; }
+
+/* Buttons & Feedback with Neon Orange Accent */
+.actions {
+  display: flex; justify-content: flex-end; gap: 0.75rem;
+  margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid #fed7aa;
+}
+.btn {
+  height: 44px; padding: 0 1.5rem; font-size: 0.95rem; font-weight: 600;
+  border-radius: 6px; border: 1.5px solid transparent; cursor: pointer; transition: 0.2s;
+}
+.btn-primary { background: #ff5f1f; color: #fff; box-shadow: 0 4px 12px rgba(255, 95, 31, 0.35); }
+.btn-primary:hover { background: #e64e10; box-shadow: 0 6px 16px rgba(255, 95, 31, 0.45); }
+.btn-secondary { background: #fff; border-color: #fdba74; color: #c2410c; }
+.btn-secondary:hover { background: #fff7ed; color: #9a3412; }
+.btn:focus-visible { outline: 2px solid #ff5f1f; outline-offset: 2px; }
+
+.alert-box { padding: 1rem; border-radius: 6px; margin-bottom: 1.25rem; font-size: 0.9rem; line-height: 1.45; }
+.alert-box.success { background: #f0fdf4; border: 1.5px solid #86efac; color: #166534; }
+.alert-box.error { background: #fef2f2; border: 1.5px solid #fca5a5; color: #991b1b; }
+footer { text-align: center; margin-top: 1.5rem; font-size: 0.8rem; color: #94a3b8; }
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column-reverse; }
+  .btn { width: 100%; }
+  .container { padding: 1.25rem; }
+}
